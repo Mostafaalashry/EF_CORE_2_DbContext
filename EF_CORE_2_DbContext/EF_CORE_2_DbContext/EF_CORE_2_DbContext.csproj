@@ -14,10 +14,14 @@
   </ItemGroup>
   <ItemGroup>
     <None Remove="appsettings.json" />
+    <None Remove="Data\" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="appsettings.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Data\" />
   </ItemGroup>
 </Project>

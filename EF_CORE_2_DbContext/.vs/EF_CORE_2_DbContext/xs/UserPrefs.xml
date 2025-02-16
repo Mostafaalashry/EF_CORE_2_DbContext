@@ -1,4 +1,27 @@
 ﻿<Properties StartupConfiguration="{6C80AA10-F382-4A84-BD58-B48C0375208D}|Default">
-  <MonoDevelop.Ide.ItemProperties.EF__CORE__2__DbContext FirstBuild="True" />
+  <MonoDevelop.Ide.ItemProperties.EF__CORE__2__DbContext PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="EF_CORE_2_DbContext/Program.cs">
+    <Files>
+      <File FileName="EF_CORE_2_DbContext/Program.cs" Line="59" Column="48" />
+      <File FileName="EF_CORE_2_DbContext/Wallet.cs" Line="12" Column="74" />
+      <File FileName="EF_CORE_2_DbContext/appsettings.json" Line="4" Column="1" />
+      <File FileName="EF_CORE_2_DbContext/AppDbContext.cs" Line="10" Column="1" />
+      <File FileName="EF_CORE_2_DbContext/ExternalDbContext.cs" Line="17" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="EF_CORE_2_DbContext">
+            <Node name="EF_CORE_2_DbContext" expanded="True" />
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
 </Properties>

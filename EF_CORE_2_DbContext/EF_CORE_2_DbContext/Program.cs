@@ -2,7 +2,7 @@
 using EF_CORE_2_DbContext;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Configuration;
-
+using Microsoft.Extensions.Logging;
 using Microsoft.EntityFrameworkCore;
 Console.WriteLine("Hello, World!");
 
@@ -11,12 +11,14 @@ Console.WriteLine("Hello, World!");
 // Internal Configration
 using (var context = new InternalDbContext())
 {
+    Console.WriteLine("Internal ");
+
     foreach (var wallet in context.Wallets)
     {
 
         Console.WriteLine(wallet);
     }
-    Console.WriteLine();
+    Console.WriteLine("iiii");
 
 
 }
@@ -65,3 +67,31 @@ using (var context = serviceProvider.GetService<ExternalDbContext>())
     }
 
 }
+
+// ddcontext by using context factory
+var servicess = new ServiceCollection();
+servicess.AddDbContextFactory<ExternalDbContext>(options =>
+options.UseSqlServer(constr)
+// i can use logger here 
+.LogTo(Console.WriteLine ,LogLevel.Information)
+);
+IServiceProvider serviceProvider1 = servicess.BuildServiceProvider();
+
+var contextFactory = serviceProvider1
+    .GetRequiredService<IDbContextFactory<ExternalDbContext>>();
+
+using (var context = contextFactory.CreateDbContext())
+{
+    foreach (var wallet in context.Wallets)
+    {
+
+        Console.WriteLine(wallet);
+    }
+
+}
+
+
+
+// context pooling
+
+
